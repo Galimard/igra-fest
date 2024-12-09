@@ -1,0 +1,88 @@
+@use "vars" as *;
+@use "mixin" as *;
+
+@font-face {
+  font-family: 'HalvarBreit';
+  src: url('../fonts/HalvarBreit-Rg.woff') format('woff');
+  src: url('../fonts/HalvarBreit-Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HalvarBreit';
+  src: url('../fonts/HalvarBreit-Bd.woff') format('woff');
+  src: url('../fonts/HalvarBreit-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HalvarBreit';
+  src: url('../fonts/HalvarBreit-XBd.woff') format('woff');
+  src: url('../fonts/HalvarBreit-XBd.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: $font;
+  font-size: 16px;
+  line-height: $lineHeight;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $cBlack;
+}
+
+html {
+  /* for firefox */
+  scrollbar-color: #8f8f8f #cccccc;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #cccccc;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+}
+
+body.no-scroll{
+  overflow: hidden !important;
+  padding-right: 16px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+  color: inherit;
+}

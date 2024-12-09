@@ -1,0 +1,60 @@
+@use "../forward" as *;
+
+.typography-h1 {
+  font-size: 48px;
+  font-weight: $fBold;
+  line-height: $lineHeightTitle;
+  padding: 16px 36px;  
+  border: 3px solid;
+  width: max-content;
+  text-transform: uppercase;
+}
+
+.typography-h2 {
+  font-size: 48px;
+  font-weight: $fBold;
+  line-height: $lineHeight;
+  text-transform: uppercase;
+}
+
+.typography-body1 {
+  font-size: 36px;
+  font-weight: $fRegular;
+  line-height: $lineHeight;
+}
+
+.typography-body2 {
+  font-size: 28px;
+  font-weight: $fRegular;
+  line-height: $lineHeight;
+}
+
+.typography-body3 {
+  font-size: 17px;
+  font-weight: $fRegular;
+  line-height: $lineHeight;
+  text-transform: uppercase;
+}
+
+.typography-menu {
+  font-size: 26px;
+  font-weight: $fBold;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.pink {
+  color: $cPink;
+}
+
+.white {
+  color: $cWhite;
+}
+
+.bold {
+  font-weight: $fBold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
