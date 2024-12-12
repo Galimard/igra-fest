@@ -1,0 +1,43 @@
+@use "../../styles/forward.scss" as *;
+
+.about {
+  &Title {
+    margin-bottom: 45px;
+  }
+
+  &Subtitle {
+    margin-bottom: 60px;
+  }
+
+  &Description {
+    margin-bottom: 100px;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Title {
+      margin-bottom: 30px;
+    }
+  
+    &Subtitle {
+      margin-bottom: 40px;
+    }
+  
+    &Description {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    &Title {
+      margin-bottom: 20px;
+    }
+  
+    &Subtitle {
+      margin-bottom: 20px;
+    }
+  
+    &Description {
+      margin-bottom: 20px;
+    }
+  }
+}

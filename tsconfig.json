@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                          // Указывает версию JavaScript, в которую будет транслироваться TypeScript
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],   // Указывает используемые библиотеки
+    "allowJs": true,                            // Разрешает компиляцию файлов JavaScript
+    "skipLibCheck": true,                       // Пропуск проверки типов внутри библиотек
+    "strict": true,                             // Включает строгую типизацию
+    "forceConsistentCasingInFileNames": true,   // Проверка регистра в названиях файлов
+    "module": "ESNext",                         // Используемый модульный формат
+    "moduleResolution": "Node",                // Метод поиска модулей
+    "resolveJsonModule": true,                 // Позволяет импортировать JSON-файлы
+    "isolatedModules": true,                   // Отдельная компиляция файлов
+    "noEmit": true,                            // Отключение вывода JavaScript-файлов
+    "jsx": "react-jsx",                        // Поддержка JSX
+    "baseUrl": "./",                            // Базовая директория для модулей
+    "paths": {
+      "@*": ["src/*"]                         // Настройка алиаса @ для импорта из папки src
+    }
+  },
+  "include": ["src"],                          // Папка, включаемая в компиляцию
+  "exclude": ["node_modules"]                  // Исключаемая папка
+}

@@ -17,7 +17,26 @@ export default [
         sourceType: 'module',
       },
     },
-    settings: { react: { version: '18.3' } },
+    settings: { 
+      react: { version: '18.3' },
+      "import/resolver": {
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        },
+        // "alias": {
+        //   "map": [
+        //     ["@components", "./src/components"],
+        //     ["@utils", "./src/utils"],
+        //     ["@assets", "./src/assets"],
+        //     ["@styles", "./src/styles"],
+        //     ["@features", "./src/features"],
+        //     ["@widgets", "./src/widgets"],
+        //   ],
+        //   "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        // }
+      }
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,

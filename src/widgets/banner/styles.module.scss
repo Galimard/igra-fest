@@ -1,0 +1,42 @@
+@use "../../styles/forward.scss" as *;
+
+.banner {
+  width: 100%;
+  height: 590px;
+  position: relative;
+
+  &Inner {
+    position: relative;
+    height: 100%;
+  }
+
+  &Button {
+    margin-top: 430px;
+  } 
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    height: 450px;
+
+    &Button {
+      margin-top: 324px;
+    } 
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    height: 300px;
+
+    &Button {
+      margin-top: 220px;
+    } 
+  }
+}

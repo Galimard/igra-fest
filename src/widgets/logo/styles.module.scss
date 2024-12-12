@@ -1,0 +1,27 @@
+@use "../../styles/forward.scss" as *;
+
+.backLink {
+  @include clear-button();
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 20px;
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  font-family: $fontMittel;
+  font-size: 16px;
+  font-weight: $fRegular;
+  line-height: 1;
+  text-transform: uppercase;
+  background: $cPink;
+  color: $cWhite;
+  max-width: 158px;
+
+  &:hover,
+  &:hover svg {
+    color: $cBlack;
+  }
+
+  &:hover svg {
+    stroke: $cBlack;
+  }
+}

@@ -1,8 +1,22 @@
-/*REACT*/
-import React from 'react';
-import Button from '../assets/components/common/Button';
+import { BackLink } from '@widgets/back-link';
+import { Button } from '@widgets/button';
+import { Logo } from '@widgets/logo';
+import { Menu } from '@widgets/menu';
+import { RunningLine } from '@widgets/running-line';
 
 export default function UIKit() {
+  const menu = [
+    {text: 'О фестивале', url: 'about'}, 
+    {text: 'Line up', url: 'line-up'}, 
+    {text: 'Билеты', url: 'tickets'}, 
+    {text: 'дресс-код', url: 'dresscode'}
+  ];
+
+  const runnigLineData = {
+    text: 'Играем роль, мы все – актеры. Так принято, что жизнь – IGRA!',
+    date: '25/01 '
+  }
+
   return (
       <>
         <div style={{marginBottom: 40}}>
@@ -18,7 +32,7 @@ export default function UIKit() {
           <p className='typography-body3 uppercase'>Text Uppercase</p>
         </div>
 
-        <div>
+        <div style={{marginBottom: 40}}>
           <h1>Кнопки</h1>
           <br />
           <Button
@@ -36,6 +50,30 @@ export default function UIKit() {
             url='https://dzen.ru/' 
             color='white' 
           />
+        </div>
+
+        <div style={{marginBottom: 40}}>
+          <h1>Меню</h1>
+
+          <Menu data={ menu } />
+        </div>
+
+        <div style={{marginBottom: 40}}>
+          <h1>Кнопка назад</h1>
+
+          <BackLink />
+        </div>
+
+        <div style={{marginBottom: 40, background: '#E81684'}}>
+          <h1>Логотип</h1>
+
+          <Logo />
+        </div>
+
+        <div style={{marginBottom: 40}}>
+          <h1>Бегущая строка</h1>
+
+          <RunningLine data={ runnigLineData } />
         </div>
       </>
   )

@@ -1,26 +1,24 @@
-/*REACT*/
-// import * as React from "react";
 import { Routes, Route } from "react-router";
 
-
-/*PAGES*/
-import IndexPage from "./pages/IndexPage";
-import MusicFestPage from "./pages/MusicFestPage";
-import SportFestPage from "./pages/SportFestPage";
+import Main from "./pages/Main";
+import MusicFest from "./pages/MusicFest";
+import SportFest from "./pages/SportFest";
 import UIKit from "./pages/UIKit";
+
+import { Layout } from "@widgets/layout";
 
 function App() {
 
   return (
     <>
-      <div>
+      <Layout>
         <Routes>
-          <Route path="/" element={<IndexPage />} />
-          <Route path="/music" element={<MusicFestPage />} />
-          <Route path="/sport" element={<SportFestPage />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/music" element={<MusicFest />} />
+          <Route path="/sport" element={<SportFest />} />
           <Route path="/ui-kit" element={<UIKit />} />
         </Routes>
-      </div>      
+      </Layout>      
     </>
   )
 }

@@ -1,0 +1,26 @@
+@use "../../styles/forward.scss" as *;
+
+.menu {
+  @include clear-list;
+  display: flex;
+  align-items: center;
+
+  &Item {
+    font-size: 26px;
+    font-weight: $fBold;
+    line-height: $lineHeight;
+    text-transform: uppercase;
+    margin-right: 70px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover,
+    &.active {
+      border-color: $cPink;
+    }
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    display: none;
+  }
+}

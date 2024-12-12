@@ -1,0 +1,46 @@
+$fontName: "HalvarBreit";
+$fontNameMittel: "HalvarMittel";
+$font: $fontName, Helvetica, Arial, sans-serif, -apple-system;
+$fontMittel: $fontNameMittel, Helvetica, Arial, sans-serif, -apple-system;
+
+$rem: 1px;
+
+$cBlack: #000000;
+$cWhite: #ffffff;
+$cPink: #E81684;
+$cLightBlue: #ACE9E4;
+$cLightViolet: #ACB6E9;
+$cLightYellow: #F6F38D;
+
+$space: 10px;
+
+$fRegular: 400;
+$fBold: 800;
+
+$lineHeight: 1.2;
+$lineHeightTitle: 1;
+
+$screenXxs: 375px; //375 //min-width
+$screenXs: 576px; //576
+$screenSm: 768px; //768
+$screenMd: 992px; //992
+$screenLg: 1024px; //1200
+$screenXl: 1240px; //1440
+$screenXxl: 1400px; //1920
+
+$screenXxsMax: ($screenXxs - 1); //max-width
+$screenXsMax: ($screenXs - 1);
+$screenSmMax: ($screenSm - 1);
+$screenMdMax: ($screenMd - 1);
+$screenLgMax: ($screenLg - 1);
+$screenXlMax: ($screenXl - 1);
+$screenXxlMax: ($screenXxl - 1);
+
+//ширина контейнера
+$c-xxl: 1180px; 
+$c-xl: 1180px; 
+$c-l: 1180px; 
+$c-md: 768px; //992
+$c-sm: 720px; //768
+$c-xs: 540px; //576
+$c-xxs: 375px; //375
