@@ -1,0 +1,120 @@
+@use "../../styles/forward.scss" as *;
+
+.lineup {
+  background: url('../../assets/images/bg.jpg') center center no-repeat;
+  // background: url('../../assets/images/arena-bg.png') center bottom no-repeat, url('../../assets/images/bg.jpg') center center no-repeat;
+  background-size: cover;
+  // background-size: 1305px 664px, cover;
+  padding-bottom: 664px;
+  position: relative;
+
+  &Title {
+    margin-bottom: 100px;
+  }
+
+  &List {
+    display: grid;
+    gap: 100px;
+  }
+
+  &Img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 1305px;
+    height: 664px;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Title {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media all and (max-width: $screenXlMax) {
+    padding-bottom: 500px;
+
+    &Img {
+      width: 1000px;
+      height: 500px;
+    }
+  }
+
+  @media all and (max-width: $screenMdMax) {
+    padding-bottom: 500px;
+
+    &Img {
+      width: 500px;
+      height: 250px;
+    }
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    padding-bottom: 150px;
+    
+    &Title {
+      margin-bottom: 40px;
+    }
+
+    &List {
+      gap: 30px;
+    }
+
+    &Img {
+      width: 300px;
+      height: 150px;
+    }
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+
+  &Person {
+    position: relative;
+  }
+
+  &Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &Name {
+    @include flexCenter;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: $cPink;
+    color: $cWhite;
+  }
+
+  &Text {
+    background: $cWhite;
+    padding: 33px 50px;
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    &Name {
+      height: 50px;
+
+      p {
+        font-size: 32px;
+      }
+    }
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    grid-template-columns: 1fr;
+
+    &Text {
+      padding: 20px 30px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use "../../styles/forward.scss" as *;
+
+.left .cardInfo {
+  clip-path: path("M276.5 218C106.661 239.93 -15.8333 224.334 -58.5 212.001H-88V548.001H580.5V162C418 162 394.5 202.764 276.5 218Z");
+}
+
+.right .cardInfo {
+  clip-path: path("M304.5 218C474.339 239.93 596.833 224.334 639.5 212.001H669V548.001H0.5V162C163 162 186.5 202.764 304.5 218Z");
+}
+
+@media all and (max-width: $screenSmMax) {
+  .left .cardInfo {
+    clip-path: path("M304.5 218C474.339 239.93 596.833 224.334 639.5 212.001H669V548.001H0.5V162C163 162 186.5 202.764 304.5 218Z");
+  }
+}
+
+.card {
+  display: block;
+  height: 100%;
+  position: relative;
+  background-size: cover !important;
+  
+  &Info {
+    height: 548px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $cWhite;
+    padding: 277px 130px 30px 50px;
+    transition: background-color 0.3s ease;    
+  }  
+
+  &Title {
+    display: block;
+    margin-bottom: 35px;
+    transition: color 0.3s ease;
+  }
+
+  &Date {
+    display: block;
+    font-size: 36px;
+    font-weight: $fBold;
+    line-height: $lineHeight;
+    color: $cPink;
+    transition: color 0.3s ease;
+  }
+
+  &:hover .cardInfo {
+    background: $cPink;
+  }
+
+  &:hover .cardTitle {
+    color: $cWhite;
+  }
+
+  &:hover .cardDate {
+    color: $cBlack;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Info {
+      height: 520px;
+    }
+  }
+
+  @media all and (max-width: $screenXlMax) {
+    &Info {
+      height: 480px;
+      padding: 260px 60px 30px 50px;
+    }
+
+    &Title {
+      margin-bottom: 30px;
+    }
+
+    &Title,
+    &Date {
+      font-size: 30px;
+    }
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    height: 350px;
+
+    &Date {
+      font-size: 20px;
+    }
+
+    &Info {
+      height: 350px;
+      padding: 240px 60px 20px 20px;
+    }
+
+    &Title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media all and (max-width: $screenXsMax) {
+    &Info {
+      padding: 220px 60px 20px 20px;
+    }
+  }
+}

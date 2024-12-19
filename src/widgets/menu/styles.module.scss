@@ -11,16 +11,28 @@
     line-height: $lineHeight;
     text-transform: uppercase;
     margin-right: 70px;
-    border-bottom: 3px solid transparent;
-    transition: border-color 0.3s ease;
 
-    &:hover,
-    &.active {
+    a {
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s ease;      
+    }
+
+    &:hover a {
       border-color: $cPink;
     }
   }
 
   @media all and (max-width: $screenXxlMax) {
-    display: none;
+    &Item {
+      font-size: 22px;
+    }    
   }
+
+  @media all and (max-width: $screenLgMax) {
+    // display: none;
+  }
+}
+
+.active {
+  border-bottom: 3px solid $cPink !important;
 }

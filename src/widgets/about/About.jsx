@@ -3,7 +3,7 @@ import classes from './styles.module.scss';
 
 export function About({ data }) {   
   return (
-    <section id='#about' className={classes.about}>
+    <section id='about' className={classes.about} data-section>
       <div className="container">
         <div className="container-inner">
           <h1 className={`${classes.aboutTitle} typography-h1 pink`}>{ data.title }</h1>

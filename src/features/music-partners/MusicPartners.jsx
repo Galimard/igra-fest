@@ -9,13 +9,17 @@ export function MusicPartners({ data }) {
         <div className="container-inner">
           <h1 className={`${classes.partnersTitle} typography-h1 pink`}>{ data.title }</h1>
           
-          <img src={img} alt="" className={classes.partnersImg} />
-          {/* <div className={classes.partnersWrap}>
+          {/* <img src={img} alt="" className={classes.partnersImg} /> */}
+          <div className={classes.partnersWrap}>
             <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
             <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
             <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
             <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
-          </div> */}
+            <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
+            <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
+            <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
+            <a href="#" className={classes.partnersItem}><img src={img} alt="" /></a>
+          </div>
         </div>          
       </div>
     </section>      

@@ -1,0 +1,158 @@
+@use "../../styles/forward.scss" as *;
+
+.mapfest {
+  background: url('../../assets/images/bg2.jpg') center center no-repeat;
+  background-size: cover;
+
+  &Title {
+    margin-bottom: 100px;
+  }
+
+  &List {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 20px;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Title {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media all and (max-width: $screenMdMax) {
+    &List {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    &Title {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.card {
+  background: $cWhite;
+
+  &Header {
+    height: 80px;
+    @include flexSpace;
+    background: $cPink;
+    padding: 0 30px;
+  }
+
+  &Day {
+    font-size: 28px;
+    font-weight: $fBold;
+    line-height: $lineHeight;
+    color: $cWhite;
+    text-transform: uppercase;
+  }
+
+  &Body {
+    display: grid;
+
+    & > div:first-child div[class*="cardItemHeader"] {
+      margin-top: 40px;
+    }
+  }
+
+  &Item {
+    &Header {
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      min-height: 48px;
+      // margin-top: 40px;
+    }
+
+    &Title {
+      font-size: 30px;
+      font-weight: $fBold;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    &Body {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      padding: 15px 30px 30px;
+
+      & > span:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Day {
+      font-size: 24px;
+    }
+
+    &Header {
+      height: 70px;
+
+      & > p:first-child {
+        font-size: 30px;
+      }      
+    }
+
+    &Item {
+      &Title {
+        font-size: 24px;
+      }
+
+      &Body {
+        grid-template-columns: 1fr 180px;
+      }
+
+      &Body .typography-body2 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media all and (max-width: $screenMdMax) {
+    &Day {
+      font-size: 20px;
+    }
+
+    &Header {
+      height: 50px;
+
+      & > p:first-child {
+        font-size: 20px;
+      }      
+    }
+
+    &Item {
+      &Title {
+        font-size: 20px;
+      }
+
+      &Body {
+        grid-template-columns: 1fr 130px;
+        padding: 15px 30px 20px;
+      }
+
+      &Body .typography-body2 {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.blue {
+  background: $cLightBlue;
+}
+
+.violet {
+  background: $cLightViolet;
+}
+
+.yellow {
+  background: $cLightYellow;
+}

@@ -5,14 +5,40 @@
     margin-bottom: 45px;
   }
 
-  &Img {
-    height: 236px;
-    width: 100%;
+  &Wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    a, & > div {
+      width: 280px;
+      height: 140px;
+    }
 
     img {
-      object-fit: cover;
       width: 100%;
       height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Wrap {
+      grid-template-columns: repeat(3, 1fr);
+
+      a, & > div {
+        width: 100%;
+      }
+    }
+  }
+
+  @media all and (max-width: $screenMdMax) {
+    &Wrap {
+      grid-template-columns: repeat(2, 1fr);
+
+      a, & > div {
+        height: 100px;
+      }
     }
   }
 }

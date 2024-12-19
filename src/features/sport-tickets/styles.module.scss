@@ -1,0 +1,97 @@
+@use "../../styles/forward.scss" as *;
+
+.tickets {
+  &Title {
+    margin-bottom: 45px;
+  }
+
+  &Subtitle {
+    margin-bottom: 60px;
+  }
+
+  &Description {
+    margin-bottom: 50px;
+  }
+
+  &List {
+    display: grid;
+    gap: 50px;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Title,
+    &Description {
+      margin-bottom: 30px;
+    }
+  
+    &Subtitle {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    &Title,
+    &Subtitle,
+    &Description {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    text-align: center;
+  }
+}
+
+.card {
+  padding: 40px 50px;
+  
+  &Title,
+  &Subtitle {
+    margin-bottom: 30px;
+  }
+
+  &Text {
+    font-family: $fontMittel;
+    font-size: 28px;
+    font-weight: $fRegular;
+    line-height: $lineHeight;
+
+    ul {
+      padding-left: 30px;
+    }
+  }
+
+  &Button {
+    width: 380px;
+    margin-top: 45px;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    &Text {
+      font-size: 22px;
+    }
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    padding: 20px 30px 30px;
+    text-align: left;
+
+    &Title {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    &Text {
+      font-size: 16px;
+
+      ul {
+        padding-left: 26px;
+      }
+    } 
+
+    &Button {
+      width: 100%;
+    }
+  }
+}
+

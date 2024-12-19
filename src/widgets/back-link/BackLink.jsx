@@ -14,7 +14,7 @@ export function BackLink({ ...props }) {
     return (
       <Link to='/' className={classes.backLink + ' ' + props.className}>
         <SvgArrow />
-        вернуться к выбору
+        вернуться на главную
       </Link>
     );
 }
@@ -24,5 +24,5 @@ BackLink.propTypes = {
 }
 
 SvgArrow.propTypes = {
-  stroke: PropTypes.string.isRequired,
+  stroke: PropTypes.string,
 }

@@ -33,10 +33,10 @@
   }
 
   @media all and (max-width: $screenLgMax) {
-    height: 300px;
+    // height: 590px;
 
     &Button {
-      margin-top: 220px;
+      display: none;
     } 
   }
 }

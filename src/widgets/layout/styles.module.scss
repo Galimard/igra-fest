@@ -2,13 +2,14 @@
 
 .header {  
   width: 100%;
-  height: 200px;
+  height: 220px;
   background: $cWhite;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 
   &Wrap {
+    width: 100%;
     display: flex;
     align-items: center;
     position: relative;
@@ -20,18 +21,267 @@
     top: 50%;
     transform: translatey(-50%);
     left: 50px;
+    max-width: 152px;
+    width: 100%;
+    padding: 9px 13px;
+  }
+
+  &Mob {
+    @include flexSpace;
+  }
+
+  &MenuMob,
+  &LogoMob,
+  &Mob {
+    display: none;
+  }
+
+  &LogoMob {
+    font-size: 26px;
+    font-weight: 800;
+    color: $cPink;
+    text-transform: uppercase;
+  }
+
+  &Menu {
+    display: none;    
   }
 
   @media all and (max-width: $screenXxlMax) {
-    height: 150px;
+    height: 110px;
+
+    &Back {
+      left: 0;
+    }
+  }
+
+  @media all and (max-width: 1500px) {
+    &Back {
+      padding: 9px 10px;
+      max-width: 126px;
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  @media all and (max-width: $screenXlMax) {
+    &MenuDesktop {
+      margin-left: 90px;
+    }
   }
 
   @media all and (max-width: $screenLgMax) {
-    height: 100px;
+    height: 80px;
 
-    &Back {
-      position: static;
-      transform: unset;
+    &Back,
+    &MenuDesktop,
+    &Close {
+      display: none;
+    }
+
+    &LogoMob {
+      display: block;
+    }
+
+    &Mob {
+      display: flex;
+    }
+
+    &Menu {
+      @include flexSpace;
+    }
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: $cPink;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    &:first-child {
+      transform: rotate(0);
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(0);
+    }
+  }
+}
+
+.burgerClose {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: $cPink;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burgerMenuOpen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: $cWhite;
+  transform: translateX(0);
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+  height: 100vh;
+  opacity: 1;
+
+  ul {
+    list-style: none;
+    margin-top: 110px;
+
+    li {
+      margin-right: 34px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // @media all and (max-width: $screenLgMax) {
+  //   display: flex;
+  // }
+}
+
+.burgerMenuClose {
+  display: none;
+  transform: translateX(100%);
+}
+
+.menuBack {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 17px;
+  left: 0;
+  z-index: 1;
+  max-width: 165px;
+  padding-left: 30px;
+}
+
+.menuBackClose {
+  opacity: 1;
+}
+
+.footer {
+  font-family: $fontMittel;
+  font-weight: $fRegular;
+  background: $cPink;
+  color: $cWhite;
+  padding: 60px 0;
+  border-bottom: 1px solid transparent;
+
+  a {
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  a:hover {
+    border-bottom: 1px solid $cWhite;
+  }
+
+  &Top {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 30px;
+  }
+
+  &Bottom {
+    @include flexSpace;
+  }
+
+  &Age {
+    font-family: $font;
+    font-size: 48px;
+    line-height: $lineHeight;
+    font-weight: 900;
+    text-align: right;
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    padding: 40px 0;
+
+    
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    text-align: center;
+
+    &Bottom,
+    &Top {
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    &Bottom {
+      p {
+        font-size: 10px;
+      }
+    }
+
+    &Age {
+      display: none;
     }
   }
 }

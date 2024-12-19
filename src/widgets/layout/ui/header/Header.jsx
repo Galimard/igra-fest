@@ -1,30 +1,39 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Menu } from '@widgets/menu';
-import classes from '../../styles.module.scss';
 import { BackLink } from '@widgets/back-link';
+import classes from '../../styles.module.scss';
+import { Burger } from '../burger';
+import { useState } from 'react';
+import { BurgerMenu } from '@widgets/layout/ui/burger-menu';
+export function Header({ menu, activeSection }) {
+  const [open, setOpen] = useState(false);
 
-export function Header() {
-  const menu = [
-    {text: 'О фестивале', url: 'about'}, 
-    {text: 'Line up', url: 'line-up'}, 
-    {text: 'Билеты', url: 'tickets'}, 
-    {text: 'дресс-код', url: 'dresscode'}
-  ];
-
-  return(
-    <header className={classes.header}>
-      <div className={classes.headerWrap}>
-        <div className="container">
-          <div className={classes.headerInner}>
-            <BackLink className={classes.headerBack} />
-            <Menu data={ menu } />
+  return (
+    <header className={classes.header}>      
+      <div className={classes.headerWrap}>        
+        <div className="container">            
+          <BackLink className={classes.headerBack} />
+          <div className={classes.headerMenuDesktop}>
+            <Menu data={ menu } activeSection={activeSection} />
           </div>
+          
+          <div className={classes.headerMob}>
+            <div className={classes.headerLogoMob}>igra 2.0</div>
+            
+            <div className={classes.headerMenu}>
+              <BackLink className={open ? classes.menuBack + ' ' + classes.menuBackClose : classes.menuBack} />
+              <Burger open={open} setOpen={setOpen} />
+              <BurgerMenu open={open} setOpen={setOpen} data={ menu } />
+            </div>
+          </div>   
+                  
         </div>
       </div>      
     </header>
   );
 }
 
-// Layout.propTypes = {
-//   children: PropTypes.func.isRequired
-// }
+Header.propTypes = {
+  menu: PropTypes.array.isRequired,
+  activeSection: PropTypes.string,
+}

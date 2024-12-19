@@ -12,13 +12,10 @@ export function RunningLine({ data }) {
       <div aria-hidden="true" className={classes.runningLine}>
         <div className={classes.runningLineText}>{ text } <span>{ date }</span></div>
       </div>
-    </div>
-    
+    </div>    
   );
 }
 
 RunningLine.propTypes = {
   data: PropTypes.object.isRequired,
-  text: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
 }

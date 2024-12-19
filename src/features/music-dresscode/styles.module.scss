@@ -1,0 +1,45 @@
+@use "../../styles/forward.scss" as *;
+
+.dresscode {
+  background: $cPink;
+
+  &Title {
+    margin-bottom: 45px;
+  }
+
+  &Subtitle {
+    margin-bottom: 60px;
+  }
+
+  &Description {
+    margin-bottom: 60px;
+  }
+
+  .container-inner {
+    padding-top: 115px;
+    padding-bottom: 0;
+  }
+
+  &Img {
+    height: 236px;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    &Title,
+    &Subtitle,
+    &Description {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    text-align: center;
+  }
+}
