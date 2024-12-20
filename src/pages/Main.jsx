@@ -6,14 +6,14 @@ export default function Main() {
   const data = [
     {
       id: 1,
-      title: 'Спортивный фестиваль в горах',
+      title: 'Спортивно-музыкальный фестиваль в горах',
       date: '20-25 января',
       img: img1,
       url: '/sport'
     },
     {
       id: 2,
-      title: 'фестиваль электронной музыки',
+      title: 'Шоу электронной музыки',
       date: '25 января',
       img: img2,
       url: '/music'

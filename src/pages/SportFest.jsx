@@ -279,7 +279,7 @@ export default function SportFest() {
           <p>Не стоит беспокоиться за свой уровень подготовки, с инструкторами школы Курорта можно быстро освоить базовые элементы для комфортного катания на горнолыжных трассах Курорта Красная Поляна. <br> Подробнее здесь: <a href="https://krasnayapolyanaresort.ru/kurort/uslugi/instructors/" target="_blank">https://krasnayapolyanaresort.ru/kurort/uslugi/instructors/</a></p><br>
           <p>Аренда оборудования в шаговой доступности от подъемника. <br>
           Подробнее здесь: <a href="https://prokat.krasnayapolyanaresort.ru/" target="_blank">https://prokat.krasnayapolyanaresort.ru/</a></p><br>
-          <p>Для ваших детей есть готовые программы от Академии райдеров. <br>
+          <p>Для ваших детей есть готовые программы от школы катания «Три вершины». <br>
           Подробнее здесь: <a href="https://krasnayapolyanaresort.ru/kids_klub/" target="_blank">https://krasnayapolyanaresort.ru/kids_klub/</a></p>
         `
       },
