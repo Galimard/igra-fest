@@ -91,6 +91,13 @@
 
     &Button {
       width: 100%;
+      padding: 2px 12px;
+    }
+  }
+
+  @media all and (max-width: $screenXxsMax) {
+    &Button {
+      font-size: 20px;
     }
   }
 }

@@ -7,14 +7,6 @@ export function RunningLine({ data }) {
 
   return (
     <>      
-      {/* <div className={classes.runningLineWrap}>
-        <div className={classes.runningLine}>
-          <div className={classes.runningLineText}>{ parse(text) } <span>{ date }</span></div>
-        </div>
-        <div aria-hidden="true" className={classes.runningLine}>
-          <div className={classes.runningLineText}>{ parse(text) } <span>{ date }</span></div>
-        </div>
-      </div>     */}
       <div className={classes.lineWrap}>
         <div className={classes.line + ' ' + classes.animation}>
           <div className={classes.lineText}>{ parse(text) } <span>{ date }</span></div>

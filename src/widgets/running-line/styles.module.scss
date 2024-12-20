@@ -1,57 +1,57 @@
 @use "../../styles/forward.scss" as *;
 
-.runningLine {
-  height: 120px;
-  background: $cPink;
-  font-size: 48px;
-  line-height: 1;
-  font-weight: $fBold;
-  text-transform: uppercase;
-  color: $cWhite;
-  padding-right: 50px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-width: 100%;
-  gap: 20px;
+// .runningLine {
+//   height: 120px;
+//   background: $cPink;
+//   font-size: 48px;
+//   line-height: 1;
+//   font-weight: $fBold;
+//   text-transform: uppercase;
+//   color: $cWhite;
+//   padding-right: 50px;
+//   flex-shrink: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   min-width: 100%;
+//   gap: 20px;
 
-  &Wrap {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    user-select: none;
-    gap: 20px;
-  }
+//   &Wrap {
+//     position: relative;
+//     display: flex;
+//     overflow: hidden;
+//     user-select: none;
+//     gap: 20px;
+//   }
 
-  &Text {
-    flex: 0 0 auto;
-    // outline: 1px solid blue;
-    animation: scroll 20s linear infinite;
-    // white-space: nowrap;
-  }
+//   &Text {
+//     flex: 0 0 auto;
+//     // outline: 1px solid blue;
+//     animation: scroll 20s linear infinite;
+//     // white-space: nowrap;
+//   }
 
-  & span {
-    padding: 3px 50px;
-    border: 3px solid;
-    margin-left: 20px;
-  }
+//   & span {
+//     padding: 3px 50px;
+//     border: 3px solid;
+//     margin-left: 20px;
+//   }
 
-  @media all and (max-width: $screenXxlMax) {
-    height: 80px;
-    font-size: 32px;
-  }
+//   @media all and (max-width: $screenXxlMax) {
+//     height: 80px;
+//     font-size: 32px;
+//   }
 
-  // @media all and (max-width: $screenLgMax) {
-  //   height: 80px;
-  //   font-size: 32px;
-  // }
+//   // @media all and (max-width: $screenLgMax) {
+//   //   height: 80px;
+//   //   font-size: 32px;
+//   // }
 
-  @media all and (max-width: $screenSmMax) {
-    height: 60px;
-    font-size: 26px;
-  }
-}
+//   @media all and (max-width: $screenSmMax) {
+//     height: 60px;
+//     font-size: 26px;
+//   }
+// }
 
 .lineWrap {
   background: $cPink;
@@ -81,13 +81,22 @@
   font-weight: $fBold;
   text-transform: uppercase;
   color: $cWhite;
-  margin: 10px 0;
   transition: all 0.1s ease-in-out;
 
   & span {
     padding: 3px 50px;
     border: 3px solid;
     margin-left: 20px;
+  }
+
+  @media all and (max-width: $screenXxlMax) {
+    height: 80px;
+    font-size: 32px;
+  }
+
+  @media all and (max-width: $screenSmMax) {
+    height: 60px;
+    font-size: 26px;
   }
 }
 
@@ -100,7 +109,6 @@
     transform: translateX(0);
   }
   to {
-    // transform: translateX(-100%);
     transform: translateX(calc(-100% - 20px));
   }
 }
