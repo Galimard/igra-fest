@@ -13,7 +13,7 @@ function App() {
 
   const menuMusic = [
     {text: 'О фестивале', url: 'about'}, 
-    {text: 'Line up', url: 'lineup'}, 
+    {text: 'Line-up', url: 'lineup'}, 
     {text: 'Билеты', url: 'tickets'}, 
     {text: 'дресс-код', url: 'dresscode'}
   ];

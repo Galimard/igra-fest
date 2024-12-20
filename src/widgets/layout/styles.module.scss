@@ -178,13 +178,12 @@
   background: $cWhite;
   transform: translateX(0);
   text-align: right;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
   height: 100vh;
-  opacity: 1;
 
   ul {
     list-style: none;
@@ -198,14 +197,9 @@
       margin-bottom: 30px;
     }
   }
-
-  // @media all and (max-width: $screenLgMax) {
-  //   display: flex;
-  // }
 }
 
 .burgerMenuClose {
-  display: none;
   transform: translateX(100%);
 }
 

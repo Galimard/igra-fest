@@ -9,27 +9,30 @@ export function Header({ menu, activeSection }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={classes.header}>      
-      <div className={classes.headerWrap}>        
-        <div className="container">            
-          <BackLink className={classes.headerBack} />
-          <div className={classes.headerMenuDesktop}>
-            <Menu data={ menu } activeSection={activeSection} />
-          </div>
-          
-          <div className={classes.headerMob}>
-            <div className={classes.headerLogoMob}>igra 2.0</div>
-            
-            <div className={classes.headerMenu}>
-              <BackLink className={open ? classes.menuBack + ' ' + classes.menuBackClose : classes.menuBack} />
-              <Burger open={open} setOpen={setOpen} />
-              <BurgerMenu open={open} setOpen={setOpen} data={ menu } />
+    <>
+      <header className={classes.header}>      
+        <div className={classes.headerWrap}>        
+          <div className="container">            
+            <BackLink className={classes.headerBack} />
+            <div className={classes.headerMenuDesktop}>
+              <Menu data={ menu } activeSection={activeSection} />
             </div>
-          </div>   
-                  
-        </div>
-      </div>      
-    </header>
+            
+            <div className={classes.headerMob}>
+              <div className={classes.headerLogoMob}>igra 2.0</div>
+              
+              <div className={classes.headerMenu}>
+                <BackLink className={open ? classes.menuBack + ' ' + classes.menuBackClose : classes.menuBack} />
+                <Burger open={open} setOpen={setOpen} />              
+              </div>
+            </div>   
+                    
+          </div>
+        </div>      
+      </header>
+      <BurgerMenu open={open} setOpen={setOpen} data={ menu } />
+    </>
+    
   );
 }
 

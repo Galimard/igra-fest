@@ -226,7 +226,7 @@ export default function SportFest() {
     tickets: [
       {
         id: 1,
-        title: 'igra comfort',
+        title: 'igra комфорт',
         subtitle: 'Проживание, билет в RED ARENA, ски-пасс на все дни проживания.',
         text: `
           <p>Дополнительные услуги от казино:</p>
@@ -243,7 +243,7 @@ export default function SportFest() {
       },
       {
         id: 2,
-        title: 'igra lite',
+        title: 'igra лайт',
         subtitle: 'Ски-пасс на все дни фестиваля, билет в RED ARENA.',
         text: `
           <p>Дополнительные услуги от казино:</p>
