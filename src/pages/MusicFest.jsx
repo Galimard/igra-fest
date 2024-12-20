@@ -15,18 +15,19 @@ import slide3 from '../assets/images/slide3.jpg';
 import slide4 from '../assets/images/slide4.jpg';
 import slide5 from '../assets/images/slide5.jpg';
 import slide6 from '../assets/images/slide6.jpg';
+import partner1 from '../assets/images/logo-champ.jpg';
 
 
 export default function MusicFest() {
   const runnigLineData = {
-    text: 'Играем роль, мы все – актеры. Так принято, что жизнь – IGRA!',
+    text: 'Играем роль, мы все – актеры. Так принято, что наша жизнь – IGRA!',
     date: '25/01 '
   }
 
   const aboutData = {
     title: 'О фестивале',
     subTitle: '25 января отправимся в чарующий мир, где фантазии воплощаются!',
-    description: 'Шоу электронной музыки IGRA 2.0 – это 6 часов качественной электронной музыки от мировых DJ, потрясающее шоу, световой перфоманс от команды Dreamlaser и Live- выступления.',
+    description: 'Шоу электронной музыки IGRA 2.0 – это 6 часов качественной электронной музыки от мировых DJ, потрясающее шоу, световой перфоманс и Live-выступления.',
     subTitleFooter: 'Вся наша жизнь — ИГРА!'
   }
 
@@ -56,7 +57,7 @@ export default function MusicFest() {
       {
         img: imgart5,
         name: 'AZARRO',
-        text: 'Диджей, музыкант, ремиксмейкер. За время своей карьеры она выступал на известных и масштабных фестивалях вместе с такими артистами, как Goom Gum, Joezi, Lizwi, Novak, Tayllor, Aaron Sevilla и другие.'
+        text: 'Диджей, музыкант, ремиксмейкер. За время своей карьеры он выступал на известных и масштабных фестивалях вместе с такими артистами, как Goom Gum, Joezi, Lizwi, Novak, Tayllor, Aaron Sevilla и другие.'
       }
     ]
   }
@@ -65,10 +66,11 @@ export default function MusicFest() {
     title: 'билеты',
     subTitle: 'Спешите приобрести билеты на главное событие января!',
     description: 'Вашему вниманию предлагаются 3 категории билетов, внимательно ознакомьтесь с ними и решите какой ритм вам по душе!',
-    description2: '— Оказаться в центре событий на «Танцполе» \n ' +
-    '— Комфортные места на трибуне «Закулисье» \n'+
+    description2: '— Оказаться в центре событий на «Танцполе» <br> ' +
+    '— Комфортные места на трибуне «Закулисье» <br>'+
     '— VIP места на трибуне «Балкон»', 
-    subTitleFooter: 'лучшие места, достаются первым, не упустите свой шанс!'
+    subTitleFooter: 'лучшие места, достаются первым, не упустите свой шанс!',
+    url: 'https://iframeab-pre8053.intickets.ru/seance/45279768'
   }
 
   const dresscodeData = {
@@ -81,6 +83,7 @@ export default function MusicFest() {
 
   const partnersData = {
     title: 'Партнёры',
+    partners: [partner1]
   }
 
   return (

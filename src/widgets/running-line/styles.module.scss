@@ -12,7 +12,9 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   min-width: 100%;
+  gap: 20px;
 
   &Wrap {
     position: relative;
@@ -23,9 +25,10 @@
   }
 
   &Text {
+    flex: 0 0 auto;
     // outline: 1px solid blue;
     animation: scroll 20s linear infinite;
-    white-space: nowrap;
+    // white-space: nowrap;
   }
 
   & span {
@@ -50,12 +53,54 @@
   }
 }
 
+.lineWrap {
+  background: $cPink;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 20px;
+}
+
+.line {
+  flex-shrink: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.lineText {
+  flex: 0 0 auto;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: $fBold;
+  text-transform: uppercase;
+  color: $cWhite;
+  margin: 10px 0;
+  transition: all 0.1s ease-in-out;
+
+  & span {
+    padding: 3px 50px;
+    border: 3px solid;
+    margin-left: 20px;
+  }
+}
+
+.animation {
+  animation: scroll 20s linear infinite;
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
   to {
     // transform: translateX(-100%);
-    transform: translateX(calc(-100% + 200px));
+    transform: translateX(calc(-100% - 20px));
   }
 }

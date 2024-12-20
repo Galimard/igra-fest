@@ -11,7 +11,7 @@ export function Banner({ data }) {
           <div className={`${classes.bannerInner} container`}>
             <Button
               text='купить билет'
-              url='https://dzen.ru/'
+              url='#tickets'
               color='white'
               className={classes.bannerButton}
             />

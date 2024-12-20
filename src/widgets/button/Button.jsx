@@ -7,7 +7,7 @@ export function Button({ ...props }) {
       <Link 
         to={ props.url } 
         className={`${classes.button} ${classes[props.color]} ${props.className}`} 
-        target='_blank'
+        target={props.target ? props.target : '_self'}
       >
           { props.text }
       </Link>
@@ -18,5 +18,6 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
+  target: PropTypes.string,
   className: PropTypes.string,
 }

@@ -9,16 +9,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+  }
 
-    a, & > div {
-      width: 280px;
-      height: 140px;
-    }
+  &Item {
+    // width: 280px;
+    height: 140px;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
