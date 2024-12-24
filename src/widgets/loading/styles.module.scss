@@ -1,0 +1,14 @@
+@use "../../styles/forward.scss" as *;
+
+.loading {
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+
+  @media all and (max-width: $screenLgMax) {
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

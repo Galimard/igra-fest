@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 import classes from '../../styles.module.scss';
-
-export function CardItem({ data }) {     
+import parse from 'html-react-parser';
+export function CardItem({ data }) {      
   return (
     <div className={classes.cardItem}>
-      {data.place && (
-        <div className={classes.cardItemHeader + ' ' + classes[data.color]}>
-          <p className={classes.cardItemTitle}>{ data.place }</p>
+      {data.subtitle && (
+        <div className={classes.cardItemHeader} style={{backgroundColor: data.backgroundColor}}>
+          <p className={classes.cardItemTitle}>{ parse(data.subtitle) }</p>
         </div>
       )}
       
       <div className={classes.cardItemBody}>
-        <span className='typography-body2'>{ data.name }</span>
-        <span className='typography-body2'>{ data.time }</span>
+        <span className='typography-body2'>{ parse(data.title) }</span>
+        <span className='typography-body2'>{ parse(data.description) }</span>
       </div>
     </div>    
   );

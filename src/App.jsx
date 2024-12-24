@@ -5,12 +5,11 @@ import Main from "./pages/Main";
 import MusicFest from "./pages/MusicFest";
 import SportFest from "./pages/SportFest";
 import UIKit from "./pages/UIKit";
-
 import { Layout } from "@widgets/layout";
 
 function App() {
   let location = useLocation();
-
+  
   const menuMusic = [
     {text: 'О фестивале', url: 'about'}, 
     {text: 'Line-up', url: 'lineup'}, 

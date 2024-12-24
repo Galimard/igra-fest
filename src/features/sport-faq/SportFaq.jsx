@@ -9,11 +9,23 @@ export function SportFaq({ data }) {
         <div className="container-inner">
           <h1 className={`${classes.faqTitle} typography-h1 pink`}>{ parse(data.title) }</h1>
 
-          {data.blocks.length > 0 && data.blocks.map(item => {
+          {data.items.length > 0 && data.items.map((item, index) => {
             return (
-              <div key={item.id}>
+              <div key={index}>
                 <h2 className={`${classes.faqSubtitle} typography-h2`}>{ parse(item.title) }</h2>
-                <div className={`${classes.faqText} typography-body1`}>{ parse(item.text) }</div>
+                <div className={`${classes.faqText} typography-body1`}>
+                  { item.items.length > 0 && item.items.map((item, index) => {
+                    if (item.description) {
+                      return (
+                        <span key={index} className={classes.faqDescr}>{ parse(item.description) }</span>
+                      )
+                    } else {
+                      return (
+                        <img key={index} src={ item.image } alt="" />
+                      )
+                    }                    
+                  })}
+                </div>
               </div>
             )
           })}

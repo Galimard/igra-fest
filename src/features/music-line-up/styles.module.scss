@@ -2,9 +2,7 @@
 
 .lineup {
   background: url('../../assets/images/bg.jpg') center center no-repeat;
-  // background: url('../../assets/images/arena-bg.png') center bottom no-repeat, url('../../assets/images/bg.jpg') center center no-repeat;
   background-size: cover;
-  // background-size: 1305px 664px, cover;
   padding-bottom: 664px;
   position: relative;
 
@@ -79,7 +77,7 @@
 
   &Img {
     width: 100%;
-    height: 100%;
+    height: 380px;
     object-fit: cover;
   }
 

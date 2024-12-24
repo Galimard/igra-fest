@@ -6,7 +6,7 @@ export function MapUI({ coords }) {
     <>
       <YMaps query={{ lang: "ru_RU", load: "package.full", apikey: 'b29760dd-e8dd-4a58-b0f3-2a3ce8a05378' }}>
         <Map
-          state={{ center: coords, zoom: 9, controls: [] }}
+          state={{ center: coords, zoom: 12, controls: [] }}
           width="100%"
           height="100%"
           options={{

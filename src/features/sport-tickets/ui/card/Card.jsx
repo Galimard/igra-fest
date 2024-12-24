@@ -3,18 +3,29 @@ import classes from '../../styles.module.scss';
 import { Button } from '@widgets/button';
 import parse from 'html-react-parser';
 
-export function Card({ data }) {  
+export function Card({ data, colorCard }) {  
   
   return (
-    <div className={classes.card + ' ' + data.colorCard} >
+    <div className={classes.card + ' ' + colorCard} >
       <p className={`${classes.cardTitle} typography-h2`}>{ parse(data.title) }</p>
       <p className={`${classes.cardSubtitle} typography-body2 bold uppercase`}>{ parse(data.subtitle) }</p>
-      <div className={classes.cardText}>{ parse(data.text) }</div>
+      <div className={classes.cardText}>
+        <p>{ parse(data.additionalServices.title) }</p>
+        <ul>
+          {data.additionalServices.items.length > 0 && data.additionalServices.items.map((item, index) => {
+            return (
+              <li key={ index }>
+                { parse(item) }
+              </li>
+            )
+          })}
+        </ul>
+      </div>
 
       <Button
-        text='купить билет'
-        url={ data.url }
-        color={data.colorCard === 'pink-card' ? 'black' : 'pink'}
+        text={ data.buyLink.title }
+        url={ data.buyLink.subtitle }
+        color={colorCard === 'pink-card' ? 'black' : 'pink'}
         className={classes.cardButton}
         target='_blank'
       />
@@ -24,4 +35,5 @@ export function Card({ data }) {
 
 Card.propTypes = {
   data: PropTypes.object.isRequired,
+  colorCard: PropTypes.string,
 }

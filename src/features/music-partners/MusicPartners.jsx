@@ -8,9 +8,9 @@ export function MusicPartners({ data }) {
           <h1 className={`${classes.partnersTitle} typography-h1 pink`}>{ data.title }</h1>
           
           <div className={classes.partnersWrap}>
-            {data.partners.length > 0 ? data.partners.map(item => {
+            {data.items.length > 0 ? data.items.map(item => {
               return (
-                <a key={item} href="#" className={classes.partnersItem}><img src={item} alt="" /></a>
+                <span key={item.title} className={classes.partnersItem}><img src={item.image} alt="" /></span>
               );
             }) : null}
           </div>

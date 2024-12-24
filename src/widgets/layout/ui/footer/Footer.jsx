@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { Logo } from '@widgets/logo';
 import classes from '../../styles.module.scss';
 
@@ -28,7 +27,3 @@ export function Footer() {
     </>
   );
 }
-
-// Layout.propTypes = {
-//   children: PropTypes.func.isRequired
-// }

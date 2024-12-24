@@ -36,7 +36,6 @@ export function Layout({ children, menu }) {
       {layout && (
         <Header
           menu={ menu } 
-          // menu={location.pathname === '/music' ? menuMusic : menuSport} 
           activeSection={activeSection}
         />
       )}
