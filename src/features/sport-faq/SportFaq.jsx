@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classes from './styles.module.scss';
 import parse from 'html-react-parser';
-
+import { urlWrap } from '../../helpers/stringHelpers';
 export function SportFaq({ data }) {   
   return (
     <section className={classes.faq}>
@@ -14,10 +14,10 @@ export function SportFaq({ data }) {
               <div key={index}>
                 <h2 className={`${classes.faqSubtitle} typography-h2`}>{ parse(item.title) }</h2>
                 <div className={`${classes.faqText} typography-body1`}>
-                  { item.items.length > 0 && item.items.map((item, index) => {
+                  { item.items.length > 0 && item.items.map((item, index) => {                    
                     if (item.description) {
                       return (
-                        <span key={index} className={classes.faqDescr}>{ parse(item.description) }</span>
+                        <span key={index} className={classes.faqDescr}>{ parse(urlWrap(item.description)) }</span>
                       )
                     } else {
                       return (
